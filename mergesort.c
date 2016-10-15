@@ -9,7 +9,7 @@
 
 void mergesort( int n, int* S );
 void merge( int h, int m, const int* U, const int* V, int* S );
-void copy( int* _origin, int* _new, int o_start, int n_start, int end );
+void copy( const int* _origin, int* _new, int o_start, int n_start, int end );
 void init( int n, int* S );
 void print( int n, const int* S );
  
@@ -65,7 +65,7 @@ void merge( int h, int m, const int* U, const int* V, int* S )
     //print( MAX_SIZE, S );
 }
  
-void copy( int* _origin, int* _new, int o_start, int n_start, int end )
+void copy( const int* _origin, int* _new, int o_start, int n_start, int end )
 {
     int i;
     for ( i = o_start; i < end; i++ )
