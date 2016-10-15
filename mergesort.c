@@ -3,14 +3,15 @@
 #include <time.h>
  
 #define MAX_SIZE 8
- 
+#define MAX_NUMBER 100
+
 //주석 풀면 연산 과정 보여줌
 
 void mergesort( int n, int* S );
-void merge( int h, int m, int* U, int* V, int* S );
+void merge( int h, int m, const int* U, const int* V, int* S );
 void copy( int* _origin, int* _new, int o_start, int n_start, int end );
 void init( int n, int* S );
-void print( int n, int* S );
+void print( int n, const int* S );
  
 int main()
 {
@@ -45,7 +46,7 @@ void mergesort( int n, int* S )
     }
 }
  
-void merge( int h, int m, int* U, int* V, int* S )
+void merge( int h, int m, const int* U, const int* V, int* S )
 {
     int i = 0, j = 0, k = 0;
  
@@ -79,10 +80,10 @@ void init( int n, int* S )
     srand( time( NULL ) );
  
     for ( i = 0; i < n; i++ )
-        S[ i ] = rand() % 100 + 1;
+        S[ i ] = rand() % MAX_NUMBER + 1;
 }
  
-void print( int n, int* S )
+void print( int n, const int* S )
 {
     for ( int i = 0; i < n; i++ )
         printf( "%d ", S[ i ] );
