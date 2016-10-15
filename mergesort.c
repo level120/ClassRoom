@@ -4,7 +4,7 @@
  
 #define MAX_SIZE 8
  
-//�ּ� Ǯ�� ���� ���� ������
+//주석 풀면 연산 과정 보여줌
 
 void mergesort( int n, int* S );
 void merge( int h, int m, int* U, int* V, int* S );
@@ -30,9 +30,9 @@ void mergesort( int n, int* S )
         int* U = ( int* )calloc( h, sizeof( int ) );
         int* V = ( int* )calloc( m, sizeof( int ) );
  
-        copy( S, U, 0, 0, h );
+        copy( S, U, 0, 0, h );		// 원본배열, 복사받을 배열, 원본 시작 index, 사본배열 시작 index, 복사할 개수
 	//print( h, U );
-        copy( S, V, h, 0, n );
+        copy( S, V, h, 0, n );		// 원본배열, 복사받을 배열, 원본 시작 index, 사본배열 시작 index, 복사할 개수
 	//print( n, V );
  
         mergesort( h, U );
