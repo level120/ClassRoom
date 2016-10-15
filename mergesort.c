@@ -32,9 +32,9 @@ void mergesort( int n, int* S )
         int* V = ( int* )calloc( m, sizeof( int ) );
  
         copy( S, U, 0, 0, h );		// 원본배열, 복사받을 배열, 원본 시작 index, 사본배열 시작 index, 복사할 개수
-	//print( h, U );
+	//printf( "U arrays : "); print( h, U );
         copy( S, V, h, 0, n );		// 원본배열, 복사받을 배열, 원본 시작 index, 사본배열 시작 index, 복사할 개수
-	//print( n, V );
+	//printf( "V arrays : "); print( m, V );
  
         mergesort( h, U );
         mergesort( m, V );
@@ -62,7 +62,7 @@ void merge( int h, int m, const int* U, const int* V, int* S )
         copy( V, S, j, k, m );
     else
         copy( U, S, i, k, h );
-    //print( MAX_SIZE, S );
+    //printf( "S arrays : "); print( MAX_SIZE, S );
 }
  
 void copy( const int* _origin, int* _new, int o_start, int n_start, int end )
