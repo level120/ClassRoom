@@ -36,7 +36,7 @@
 >
 > ![rom](http://itstudy.dothome.co.kr/files/attach/images/639/936/b28ab0727f69d87a27417903a646a0c8_2.png)
 
-**p. 267** - Memory Address table & **p. 268** pigure 5-9
+**p. 267** - Memory Address table & **p. 268** picture 5-9
 
 -	CPU + RAM + ROM + Memory Tables
 
@@ -51,6 +51,6 @@
 > -	캐시는 몇 개의 블록을 수용할 수 있는가?
 >
 
-**p. 342** - pigure 6-18
+**p. 342** - picture 6-18
 
 ---
