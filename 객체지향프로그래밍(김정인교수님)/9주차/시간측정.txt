@@ -1,0 +1,10 @@
+
+	모두 long 형으로 반환함
+
+	System.currentTimeMillis()	// 1/1000초
+
+	https://ko.wikipedia.org/wiki/%EC%99%84%EC%A0%84%EC%88%98
+
+	100억까지 2^34,
+
+	2^18 * 2^17로 나누면 될 것 같으나, 18은 소수가 아님으로 2^19 * 2^18 까지만 하면 될 것 같다.
