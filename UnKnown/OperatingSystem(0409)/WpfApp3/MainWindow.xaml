@@ -47,9 +47,9 @@
                 <ColumnDefinition Width="1*"/>
                 <ColumnDefinition Width="1*"/>
             </Grid.ColumnDefinitions>
-            <Grid x:Name="ChartArea" Margin="10">
-                <WindowsFormsHost>
-                    <mschart:Chart Name="chart1"/>
+            <Grid x:Name="LeftArea" Margin="10">
+                <WindowsFormsHost x:Name="WFH">
+                    <mschart:Chart x:Name="chart1"/>
                 </WindowsFormsHost>
             </Grid>
             <Grid x:Name="InfoArea" Grid.Column="1" Margin="10" Grid.ColumnSpan="2"/>

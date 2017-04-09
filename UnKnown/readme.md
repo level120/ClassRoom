@@ -17,4 +17,5 @@ so daily i fix them.
 3. Make new user control that right area of process tables.
 4. Add a MSchart in left area and Changed series are range bar(almost same the gantt chart).
 5. Add two action event. First, A shadow textbox(only numeric and not paste), Second, A toggle switch working(some ceil of DataGrid(java name jtables) read only).
+6. Binding both DataGrid(Jtables) and MSchart.
 ```

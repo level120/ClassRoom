@@ -25,19 +25,22 @@ namespace WpfApp3
     {
         List<ProcessData> data;
         string processCount;
+        //WindowsFormsHost windowsFormsHost;
+        //Chart chart;
 
         public MainWindow()
         {
             InitializeComponent();
             initialize();
-
-            ChartTest();
         }
 
         private void initialize()
         {
             data = new List<ProcessData>();
-            
+            //windowsFormsHost = (WindowsFormsHost)ChartArea.Children[0];
+            //chart = (Chart)windowsFormsHost.Child;
+            chart1.ChartAreas.Add("ChartArea");
+
             /* Binding */
             this.DataContext = new ProcCnt();
 
@@ -48,28 +51,22 @@ namespace WpfApp3
             TBPSCount.CommandBindings.Add(new CommandBinding(ApplicationCommands.Paste, tb_Right_Click));
         }
 
-        private void ChartTest()
+        private void ChartUpdate(int number)
         {
-            var windowsFormsHost = (WindowsFormsHost)ChartArea.Children[0];
-
-            var chart = (Chart)windowsFormsHost.Child;
-
-            chart.ChartAreas.Add("ChartArea");
+            chart1.Series.Clear();
 
             Series seriesGantt = new Series();
             seriesGantt.ChartType = SeriesChartType.RangeBar;
-
+                        
             seriesGantt.YValuesPerPoint = 2;
-
-            seriesGantt.Points.AddXY(5, 4, 7);
-            seriesGantt.Points.AddXY(5, 1, 2);
-
-            seriesGantt.Points.AddXY(2, 0, 1);
-            seriesGantt.Points.AddXY(2, 2, 4);
-
-            seriesGantt.Points.AddXY(3, 7, 8);
-
-            chart.Series.Add(seriesGantt);
+            
+            for (int i = 0; i < number; i++)
+            {
+                seriesGantt.Points.AddXY(Convert.ToInt32(data[i].pid), Convert.ToInt32(data[i].arrived_time), (Convert.ToInt32(data[i].arrived_time) + Convert.ToInt32(data[i].service_time)));
+            }
+            
+            chart1.Series.Add(seriesGantt);
+            chart1.Update();
         }
 
         /* tb_rule() 과 tb_Right_Click 은 textbox 의 정책 */
@@ -103,6 +100,7 @@ namespace WpfApp3
             if (!ToggleCheck.IsChecked)
             {
                 RightControl.ProcessTable.IsReadOnly = ToggleCheck.IsChecked;
+                RightControl.PTHeader1.IsReadOnly = RightControl.PTHeader2.IsReadOnly = true;
             }
         }
 
@@ -113,9 +111,14 @@ namespace WpfApp3
 
             try
             {
-                CreateTables(Convert.ToInt32(processCount));
+                int number = Convert.ToInt32(processCount);
+                CreateTables(number);
+                ChartUpdate(number);
             }
-            catch { }
+            catch (Exception err)
+            {
+                Console.WriteLine(err);
+            }
         }
 
         private void CreateTables(int number)
