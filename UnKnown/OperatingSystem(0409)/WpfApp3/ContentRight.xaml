@@ -18,7 +18,7 @@
                       SelectionUnit="FullRow"
                       Height="222.5"
                       VerticalAlignment="Top"
-                      d:LayoutOverrides="TopMargin, BottomMargin">
+                      d:LayoutOverrides="TopMargin, BottomMargin" PreviewTextInput="ProcessTable_PreviewTextInput">
             <!--AutoGenerateColumns="False"         --><!-- 미설정시 Binding 된 데이터 헤더도 같이 나옴 --><!--
                 SelectionMode="Single"              --><!-- 하나씩 선택(멀티선택 안됨) --><!--
                 CanUserAddRows="False"              --><!-- 마지막 줄 생성여부 --><!--

@@ -23,6 +23,27 @@ namespace WpfApp3
         public ContentRight()
         {
             InitializeComponent();
+
+            UserInit();
+        }
+
+        private void UserInit()
+        {
+            /* DataGrid 한글 막기 */
+            InputMethod.SetIsInputMethodEnabled(this.ProcessTable, false);
+        }
+
+        /* DataGrid Nermeric Only */
+        private void ProcessTable_PreviewTextInput(object sender, TextCompositionEventArgs e)
+        {
+            foreach (char c in e.Text)
+            {
+                if (!char.IsDigit(c))
+                {
+                    e.Handled = true;
+                    break;
+                }
+            }
         }
     }
 }

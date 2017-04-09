@@ -37,8 +37,6 @@ namespace WpfApp3
         private void initialize()
         {
             data = new List<ProcessData>();
-            //windowsFormsHost = (WindowsFormsHost)ChartArea.Children[0];
-            //chart = (Chart)windowsFormsHost.Child;
             chart1.ChartAreas.Add("ChartArea");
 
             /* Binding */
@@ -49,8 +47,12 @@ namespace WpfApp3
 
             /* 붙여넣기 방지 */
             TBPSCount.CommandBindings.Add(new CommandBinding(ApplicationCommands.Paste, tb_Right_Click));
+
+            /* TextBox 한글 막기 */
+            InputMethod.SetIsInputMethodEnabled(this.TBPSCount, false);
         }
 
+        /* Chart Update */
         private void ChartUpdate(int number)
         {
             chart1.Series.Clear();
@@ -62,7 +64,8 @@ namespace WpfApp3
             
             for (int i = 0; i < number; i++)
             {
-                seriesGantt.Points.AddXY(Convert.ToInt32(data[i].pid), Convert.ToInt32(data[i].arrived_time), (Convert.ToInt32(data[i].arrived_time) + Convert.ToInt32(data[i].service_time)));
+                if (data[i].pid != "" && data[i].arrived_time != "" || data[i].service_time != "")
+                    seriesGantt.Points.AddXY(Convert.ToInt32(data[i].pid), Convert.ToInt32(data[i].arrived_time), (Convert.ToInt32(data[i].arrived_time) + Convert.ToInt32(data[i].service_time)));
             }
             
             chart1.Series.Add(seriesGantt);
@@ -87,11 +90,14 @@ namespace WpfApp3
             e.Handled = true;
         }
 
+        /* DataGrid IsReadOnly Changing */
         private void ToggleCheck_Checked(object sender, RoutedEventArgs e)
         {
             if (ToggleCheck.IsChecked)
             {
                 RightControl.ProcessTable.IsReadOnly = ToggleCheck.IsChecked;
+
+                DataGridAndChartWorking();
             }
         }
 
@@ -101,9 +107,31 @@ namespace WpfApp3
             {
                 RightControl.ProcessTable.IsReadOnly = ToggleCheck.IsChecked;
                 RightControl.PTHeader1.IsReadOnly = RightControl.PTHeader2.IsReadOnly = true;
+
+                DataGridAndChartWorking();
             }
         }
 
+        /* Data And Chart Update */
+        private void DataGridAndChartWorking()
+        {
+            if (processCount != null && processCount != "")
+            {
+                int number = Convert.ToInt32(processCount);
+                CreateTables(number);
+
+                try
+                {
+                    ChartUpdate(number);
+                }
+                catch (Exception err)
+                {
+                    Console.WriteLine(err);
+                }
+            }
+        }
+
+        /* TextBox ViewModel 연결해서 값 바꿈 */
         private void TBPSCount_TextChanged(object sender, TextChangedEventArgs e)
         {
             var viewModel = this.DataContext as ProcCnt;
@@ -111,9 +139,7 @@ namespace WpfApp3
 
             try
             {
-                int number = Convert.ToInt32(processCount);
-                CreateTables(number);
-                ChartUpdate(number);
+                DataGridAndChartWorking();
             }
             catch (Exception err)
             {
@@ -121,6 +147,7 @@ namespace WpfApp3
             }
         }
 
+        /* DataGrid Changing */
         private void CreateTables(int number)
         {
             if (number < 1)
@@ -150,6 +177,7 @@ namespace WpfApp3
         }
     }
 
+    /* ProcessCount TextBox에 대한 ViewModel */
     public class ProcCnt : INotifyPropertyChanged
     {
         public string processCount;
