@@ -1,4 +1,0 @@
-C:\Users\tnara\Documents\Visual Studio 2017\Projects\OperatingSystem\WpfApp3\obj\x64\Debug\WpfApp3.csprojResolveAssemblyReference.cache
-C:\Users\tnara\Documents\Visual Studio 2017\Projects\OperatingSystem\WpfApp3\obj\x64\Debug\App.g.cs
-C:\Users\tnara\Documents\Visual Studio 2017\Projects\OperatingSystem\WpfApp3\obj\x64\Debug\WpfApp3_Content.g.cs
-C:\Users\tnara\Documents\Visual Studio 2017\Projects\OperatingSystem\WpfApp3\obj\x64\Debug\WpfApp3_MarkupCompile.cache
