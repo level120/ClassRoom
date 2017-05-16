@@ -1,0 +1,6 @@
+c:\users\tnara\documents\visual studio 2017\Projects\AlgorithmTest\AlgorithmTest\obj\Debug\AlgorithmTest.csprojResolveAssemblyReference.cache
+c:\users\tnara\documents\visual studio 2017\Projects\AlgorithmTest\AlgorithmTest\bin\Debug\AlgorithmTest.exe.config
+c:\users\tnara\documents\visual studio 2017\Projects\AlgorithmTest\AlgorithmTest\bin\Debug\AlgorithmTest.exe
+c:\users\tnara\documents\visual studio 2017\Projects\AlgorithmTest\AlgorithmTest\bin\Debug\AlgorithmTest.pdb
+c:\users\tnara\documents\visual studio 2017\Projects\AlgorithmTest\AlgorithmTest\obj\Debug\AlgorithmTest.exe
+c:\users\tnara\documents\visual studio 2017\Projects\AlgorithmTest\AlgorithmTest\obj\Debug\AlgorithmTest.pdb
