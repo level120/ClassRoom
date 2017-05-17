@@ -4,3 +4,9 @@ c:\users\tnara\documents\visual studio 2017\Projects\AlgorithmTest\AlgorithmTest
 c:\users\tnara\documents\visual studio 2017\Projects\AlgorithmTest\AlgorithmTest\bin\Debug\AlgorithmTest.pdb
 c:\users\tnara\documents\visual studio 2017\Projects\AlgorithmTest\AlgorithmTest\obj\Debug\AlgorithmTest.exe
 c:\users\tnara\documents\visual studio 2017\Projects\AlgorithmTest\AlgorithmTest\obj\Debug\AlgorithmTest.pdb
+D:\OneDrive\학교교재\A_Github\ClassRoom\UnKnown\AlgorithmTest\AlgorithmTest\bin\Debug\AlgorithmTest.exe.config
+D:\OneDrive\학교교재\A_Github\ClassRoom\UnKnown\AlgorithmTest\AlgorithmTest\bin\Debug\AlgorithmTest.exe
+D:\OneDrive\학교교재\A_Github\ClassRoom\UnKnown\AlgorithmTest\AlgorithmTest\bin\Debug\AlgorithmTest.pdb
+D:\OneDrive\학교교재\A_Github\ClassRoom\UnKnown\AlgorithmTest\AlgorithmTest\obj\Debug\AlgorithmTest.csprojResolveAssemblyReference.cache
+D:\OneDrive\학교교재\A_Github\ClassRoom\UnKnown\AlgorithmTest\AlgorithmTest\obj\Debug\AlgorithmTest.exe
+D:\OneDrive\학교교재\A_Github\ClassRoom\UnKnown\AlgorithmTest\AlgorithmTest\obj\Debug\AlgorithmTest.pdb
