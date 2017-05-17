@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace AlgorithmTest
 {
-    class SRT
+    class RoundRobin
     {
         private List<ProcessData> data;
         private List<ProcessData> estimate_data;
@@ -14,13 +14,18 @@ namespace AlgorithmTest
         private List<int> delay_data;
         private List<int> return_data;
 
-        public SRT( List<ProcessData> pre_data )
+        private int time_slice;
+
+        /* arg 1 = List<ProcessData>, arg 2 = int  - it's a time slice(Quantorm) */
+        public RoundRobin( List<ProcessData> pre_data, int _time_slice )
         {
             data = pre_data;
 
             estimate_data = new List<ProcessData>();
             delay_data = new List<int>();
             return_data = new List<int>();
+
+            time_slice = _time_slice;
 
             Common.Sort_Initialize( data );
         }
@@ -37,20 +42,22 @@ namespace AlgorithmTest
 
                 init();
 
-                for ( int time = 0; time < limit; time++ )
+                for ( int time = 0, pos = 0; time < limit; time++ )
                 {
-                    for ( int i = 0; i < data.Count; i++ )
+                    // 첫 구동시 Ready Queue 등록(첫 구동에만 동작)
+                    if ( time == 0 )
                     {
-                        if ( Convert.ToInt32( data[ i ].arrived_time ) == time )
+                        for ( int i = 0; i < data.Count; i++ )
                         {
-                            ready_queue.Add( data[ i ] );
+                            if ( Convert.ToInt32( data[ i ].arrived_time ) == time )
+                            {
+                                ready_queue.Add( data[ i ] );
+                            }
                         }
                     }
 
                     if ( ready_queue.Count > 0 )
                     {
-                        Common.Sort_SRT( ready_queue );
-
                         estimate_data.Add( new ProcessData( new string[]
                         {
                             ready_queue[0].no,
@@ -71,8 +78,32 @@ namespace AlgorithmTest
                         // 대기 시간 구하기 위한 flag
                         working_ps_no = Convert.ToInt32( ready_queue[ 0 ].no );
 
+
+                        // 해당 time 에 도착한 프로세스 등록
+                        for ( int i = 0; i < data.Count; i++ )
+                        {
+                            if ( Convert.ToInt32( data[ i ].arrived_time ) == ( time + 1 ) )
+                            {
+                                ready_queue.Add( data[ i ] );
+                            }
+                        }
+
+                        // End job
                         if ( Convert.ToInt32( ready_queue[ 0 ].service_time ) < 1 )
+                        {
                             ready_queue.RemoveAt( 0 );
+                            pos = 0;
+                        }
+
+                        // Time out
+                        else if ( pos++ % time_slice == ( time_slice - 1 ) )
+                        {
+
+                            ProcessData tmp = ready_queue[ 0 ];
+                            ready_queue.RemoveAt( 0 );
+                            ready_queue.Add( tmp );
+
+                        }
                     }
                 }
             }

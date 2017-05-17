@@ -15,14 +15,15 @@ namespace AlgorithmTest
             test.check();
 
             //FCFS fcfs = new FCFS(test.data);
-            SRT srt = new SRT( test.data );
+            //SRT srt = new SRT( test.data );
+            RoundRobin rrb = new RoundRobin( test.data, 3 );
 
-            test.data = srt.working();
+            test.data = rrb.working();
 
             test.check();
 
-            Console.WriteLine( "평균대기시간 : " + srt.avg_wait() + "ms" );
-            Console.WriteLine( "평균반환시간 : " + srt.avg_return() + "ms" );
+            Console.WriteLine( "평균대기시간 : " + rrb.avg_wait() + "ms" );
+            Console.WriteLine( "평균반환시간 : " + rrb.avg_return() + "ms" );
             Console.WriteLine();
         }
     }

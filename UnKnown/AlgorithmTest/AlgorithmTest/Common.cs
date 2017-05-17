@@ -45,13 +45,6 @@ namespace AlgorithmTest
                 return -1;
             return 1;
         }
-
-        private static int Follow_RoundRobin( ProcessData A, ProcessData B )
-        {
-            if ( Convert.ToInt32( A.pid ) < Convert.ToInt32( B.pid ) )
-                return -1;
-            return 1;
-        }
         #endregion
 
         #region begin sort section
@@ -76,12 +69,6 @@ namespace AlgorithmTest
         public static List<ProcessData> Sort_Priority( List<ProcessData> data )
         {
             data.Sort( Follow_Priority );
-            return data;
-        }
-
-        public static List<ProcessData> Sort_RoundRobin( List<ProcessData> data )
-        {
-            data.Sort( Follow_RoundRobin );
             return data;
         }
         #endregion
