@@ -45,7 +45,7 @@ namespace AlgorithmTest
                 for ( int time = 0, pos = 0; time < limit; time++ )
                 {
                     // 첫 구동시 Ready Queue 등록(첫 구동에만 동작)
-                    if ( time == 0 )
+                    if ( ready_queue.Count == 0 )
                     {
                         for ( int i = 0; i < data.Count; i++ )
                         {
