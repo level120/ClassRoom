@@ -22,7 +22,7 @@ namespace AlgorithmTest
             delay_data = new List<int>();
             return_data = new List<int>();
 
-            Common.Sort_Initialize( data );
+            data = Common.Sort_Initialize( data );
         }
 
         public List<ProcessData> working()
@@ -49,7 +49,7 @@ namespace AlgorithmTest
 
                     if ( ready_queue.Count > 0 )
                     {
-                        Common.Sort_Priority( ready_queue );
+                        ready_queue = Common.Sort_Priority( ready_queue );
 
                         estimate_data.Add( new ProcessData( new string[]
                         {

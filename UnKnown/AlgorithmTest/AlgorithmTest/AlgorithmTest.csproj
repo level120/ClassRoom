@@ -44,6 +44,7 @@
   <ItemGroup>
     <Compile Include="Common.cs" />
     <Compile Include="FCFS.cs" />
+    <Compile Include="HRN.cs" />
     <Compile Include="Priority.cs" />
     <Compile Include="ProcessData.cs" />
     <Compile Include="Main.cs" />

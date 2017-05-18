@@ -27,7 +27,7 @@ namespace AlgorithmTest
 
             time_slice = _time_slice;
 
-            Common.Sort_Initialize( data );
+            data = Common.Sort_Initialize( data );
         }
 
         public List<ProcessData> working()

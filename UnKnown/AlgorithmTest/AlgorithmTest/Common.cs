@@ -42,7 +42,15 @@ namespace AlgorithmTest
         /* 우선순위 정렬 */
         private static int Follow_Priority( ProcessData A, ProcessData B )
         {
-            if ( Convert.ToInt32( A.priority ) > Convert.ToInt32( B.priority ) )
+            if ( Convert.ToInt32( A.priority ) >= Convert.ToInt32( B.priority ) )
+                return -1;
+            return 1;
+        }
+
+        /* 응답시간 순위 정렬 */
+        private static int Follow_HRN( Cal_Temp A, Cal_Temp B )
+        {
+            if ( Convert.ToInt32( A.respone_value ) >= Convert.ToInt32( B.respone_value ) )
                 return -1;
             return 1;
         }
@@ -70,6 +78,12 @@ namespace AlgorithmTest
         public static List<ProcessData> Sort_Priority( List<ProcessData> data )
         {
             data.Sort( Follow_Priority );
+            return data;
+        }
+
+        public static List<Cal_Temp> Sort_HRN( List<Cal_Temp> data )
+        {
+            data.Sort( Follow_HRN );
             return data;
         }
         #endregion
