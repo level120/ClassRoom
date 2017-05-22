@@ -1,0 +1,8 @@
+C:\Users\tnara\Documents\Visual Studio 2017\Projects\AlgorithmTest\AlgorithmTest\bin\Release\AlgorithmTest.exe.config
+C:\Users\tnara\Documents\Visual Studio 2017\Projects\AlgorithmTest\AlgorithmTest\bin\Release\AlgorithmTest.exe
+C:\Users\tnara\Documents\Visual Studio 2017\Projects\AlgorithmTest\AlgorithmTest\bin\Release\AlgorithmTest.pdb
+C:\Users\tnara\Documents\Visual Studio 2017\Projects\AlgorithmTest\AlgorithmTest\obj\Release\AlgorithmTest.Form1.resources
+C:\Users\tnara\Documents\Visual Studio 2017\Projects\AlgorithmTest\AlgorithmTest\obj\Release\AlgorithmTest.Properties.Resources.resources
+C:\Users\tnara\Documents\Visual Studio 2017\Projects\AlgorithmTest\AlgorithmTest\obj\Release\AlgorithmTest.csproj.GenerateResource.Cache
+C:\Users\tnara\Documents\Visual Studio 2017\Projects\AlgorithmTest\AlgorithmTest\obj\Release\AlgorithmTest.exe
+C:\Users\tnara\Documents\Visual Studio 2017\Projects\AlgorithmTest\AlgorithmTest\obj\Release\AlgorithmTest.pdb

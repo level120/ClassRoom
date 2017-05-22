@@ -1,12 +1,9 @@
-c:\users\tnara\documents\visual studio 2017\Projects\AlgorithmTest\AlgorithmTest\obj\Debug\AlgorithmTest.csprojResolveAssemblyReference.cache
-c:\users\tnara\documents\visual studio 2017\Projects\AlgorithmTest\AlgorithmTest\bin\Debug\AlgorithmTest.exe.config
-c:\users\tnara\documents\visual studio 2017\Projects\AlgorithmTest\AlgorithmTest\bin\Debug\AlgorithmTest.exe
-c:\users\tnara\documents\visual studio 2017\Projects\AlgorithmTest\AlgorithmTest\bin\Debug\AlgorithmTest.pdb
-c:\users\tnara\documents\visual studio 2017\Projects\AlgorithmTest\AlgorithmTest\obj\Debug\AlgorithmTest.exe
-c:\users\tnara\documents\visual studio 2017\Projects\AlgorithmTest\AlgorithmTest\obj\Debug\AlgorithmTest.pdb
-D:\OneDrive\학교교재\A_Github\ClassRoom\UnKnown\AlgorithmTest\AlgorithmTest\bin\Debug\AlgorithmTest.exe.config
-D:\OneDrive\학교교재\A_Github\ClassRoom\UnKnown\AlgorithmTest\AlgorithmTest\bin\Debug\AlgorithmTest.exe
-D:\OneDrive\학교교재\A_Github\ClassRoom\UnKnown\AlgorithmTest\AlgorithmTest\bin\Debug\AlgorithmTest.pdb
-D:\OneDrive\학교교재\A_Github\ClassRoom\UnKnown\AlgorithmTest\AlgorithmTest\obj\Debug\AlgorithmTest.csprojResolveAssemblyReference.cache
-D:\OneDrive\학교교재\A_Github\ClassRoom\UnKnown\AlgorithmTest\AlgorithmTest\obj\Debug\AlgorithmTest.exe
-D:\OneDrive\학교교재\A_Github\ClassRoom\UnKnown\AlgorithmTest\AlgorithmTest\obj\Debug\AlgorithmTest.pdb
+C:\Users\tnara\Documents\Visual Studio 2017\Projects\AlgorithmTest\AlgorithmTest\bin\Debug\AlgorithmTest.exe.config
+C:\Users\tnara\Documents\Visual Studio 2017\Projects\AlgorithmTest\AlgorithmTest\bin\Debug\AlgorithmTest.exe
+C:\Users\tnara\Documents\Visual Studio 2017\Projects\AlgorithmTest\AlgorithmTest\bin\Debug\AlgorithmTest.pdb
+C:\Users\tnara\Documents\Visual Studio 2017\Projects\AlgorithmTest\AlgorithmTest\obj\Debug\AlgorithmTest.csprojResolveAssemblyReference.cache
+C:\Users\tnara\Documents\Visual Studio 2017\Projects\AlgorithmTest\AlgorithmTest\obj\Debug\AlgorithmTest.Form1.resources
+C:\Users\tnara\Documents\Visual Studio 2017\Projects\AlgorithmTest\AlgorithmTest\obj\Debug\AlgorithmTest.Properties.Resources.resources
+C:\Users\tnara\Documents\Visual Studio 2017\Projects\AlgorithmTest\AlgorithmTest\obj\Debug\AlgorithmTest.csproj.GenerateResource.Cache
+C:\Users\tnara\Documents\Visual Studio 2017\Projects\AlgorithmTest\AlgorithmTest\obj\Debug\AlgorithmTest.exe
+C:\Users\tnara\Documents\Visual Studio 2017\Projects\AlgorithmTest\AlgorithmTest\obj\Debug\AlgorithmTest.pdb
